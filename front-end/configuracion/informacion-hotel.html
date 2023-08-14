@@ -1,0 +1,216 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Luminar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- BARRA DE NAVEGACION -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark justify-content-between">
+        <!--Brand-->
+        <a href="#" class="navbar-brand mx-5">
+            <h1 class="name-hotel">Luminar</h1>
+        </a>
+        <!--boton collapse-->
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#contenido-nav"
+            aria-controls="contenido-nav" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--nav content-->
+        <div class="collapse navbar-collapse flex-grow-0 mx-5" id="contenido-nav">
+            <ul class="navbar-nav">
+                <!-- INICIO -->
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">
+                        Inicio
+                    </a>
+                </li>
+                <!-- RESERVA -->
+                <li class="nav-item">
+                    <a href="../reserva/reserva.html" class="nav-link">
+                        Reserva
+                    </a>
+                </li>
+                <!-- RECEPCION -->
+                <li class="nav-item">
+                    <a href="../recepcion/recepcion.html" class="nav-link">
+                        Recepcion
+                    </a>
+                </li>
+                <!-- PUNTO DE VENTA -->
+                <li class="nav-item dropdown">
+                    <a href="../punto-de-venta/punto-venta.html" class="nav-link">
+                        Punto de venta
+                    </a>
+                </li>
+                <!-- VERIFICACION DE SALIDAS -->
+                <li class="nav-item">
+                    <a href="../verificacion salidas/verificacion-salidas.html" class="nav-link">
+                        Verificacion de salidas
+                    </a>
+                </li>
+                <!-- CLIENTES -->
+                <li class="nav-item">
+                    <a href="../clientes/clientes.html" class="nav-link">
+                        Clientes
+                    </a>
+                </li>
+                <!-- REPORTES -->
+                <li class="nav-item dropdown">
+                    <a href="../reportes/reportes.html" class="nav-link seccion-reportes">
+                        Reportes
+                    </a>
+                </li>
+                <!-- USUARIOS -->
+                <li class="nav-item">
+                    <a href="../usuarios/usuarios.html" class="nav-link seccion-usuarios">
+                        Usuarios
+                    </a>
+                </li>
+                <!-- CONFIGURACION -->
+                <li class="nav-item active dropdown seccion-configuracion">
+                    <a href="#" class="nav-link active dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Configuracion
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item active" href="#">Informacion Hotel</a></li>
+                        <li><a class="dropdown-item" href="habitaciones.html">Habitaciones</a></li>
+                        <li><a class="dropdown-item" href="categorias.html">Categorias</a></li>
+                        <li><a class="dropdown-item" href="niveles.html">Niveles</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="collapse navbar-collapse flex-grow-0 mx-5" id="contenido-nav">
+            <ul class="navbar-nav">
+                <!-- INFORMACION -->
+                <li class="nav-item dropdown">
+                    <div class="btn-group">
+                        <a href="#" class="nav-link dropdown" id="btn-dropdown-informacion" data-bs-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="true">
+                            <i class="bi bi-person-circle"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark"
+                            aria-labelledby="btn-dropdown-informacion" style="width: auto;">
+                            <li><a href="../perfil/perfil.html" class="dropdown-item" id="">Perfil</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="text-center">
+                                <button class="btn btn-outline-danger" id="id-btn-cerrar-sesion">
+                                    <i class="bi bi-backspace"></i>
+                                    Cerrar sesion
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <main class="container-fluid">
+        <i class="bi bi-gear-fill configuracion"></i>
+        <h2 class="d-inline-block">INFORMACION</h2>
+
+
+
+        <div class="row py-5">
+            <!-- TABLE DE EDITAR -->
+            <div id="id-table-info">
+                <div class="card shadow mt-2 p-0 card-hotel">
+
+                    <div class="card-header p-2 h5">
+                        <div class="text-end">
+                            <button type="button" class="btn btn-primary" id="id-editar">
+                                Editar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body p-0 pb-2">
+                        <table class="table table-striped table-hover" id="id-table-info-hotel">
+                            <thead class="text-start text-informacion">
+
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TABLE DE EDITAR -->
+            <div id="id-table-edit">
+                <div class="card shadow mt-2 p-0 card-hotel" id="">
+                    <div class="card-header p-2 text-end">
+                        <a href="informacion-hotel.html" class="btn btn-danger">Atras</a>
+                    </div>
+                    <div class="card-body p-0 pb-2">
+                        <table class="table table-striped table-hover" id="id-table-edit-info-hotel">
+                            <thead class="text-start text-informacion">
+                                <tr>
+                                    <th>
+                                        Nombre Hotel: <br>
+                                        <input type="text" class="w-100" name="nombre" id="id-nombre" required>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Telefono: <br>
+                                        <input type="text" class="w-100" name="telefono" id="id-telefono" required>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Correo: <br>
+                                        <input type="text" class="w-100" name="correo" id="id-correo" required>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Ubicación: <br>
+                                        <input type="text" class="w-100" name="ubicacion" id="id-ubicacion" required>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Tipo de moneda: <br>
+                                        <input type="text" class="w-100" name="tipoMoneda" id="id-tipo-moneda" required>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <button type="submit" class="btn btn-primary" id="id-guardar">
+                                            Guardar
+                                        </button>
+                                    </th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="module" src="../js/index.js"></script>
+    <script type="module" src="../js/hotel.js"></script>
+
+</body>
+
+</html>
+

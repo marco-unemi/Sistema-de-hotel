@@ -1,0 +1,65 @@
+@startuml ModeloHotel
+class Pago {
+    id_pago : string
+    monto : string
+    fecha : date
+}
+class Cliente {
+    id_cliente : string
+    nombre : string
+    apellido : string
+    genero : string
+    email : string
+    telefono : number
+}
+class Habitacion {
+    numeroHabitacion : string
+    tipo : string
+    estado : string
+}
+class Reserva {
+    id_reserva : string
+    fechaInicio : date
+    fechaFin : date
+    estado : string
+}
+class Factura {
+    id_factura : string
+    totalValor : string
+    fechaEmision : date
+}
+class Consumo {
+    id_consumo : string
+    descripcion : string
+    precio : number
+}
+class EmpleadoMostrador {
+    id_empleado : string
+    nombre : string
+    apellido : string
+    genero : string
+    puesto : string
+}
+class Gerente {
+    id_gerente : string
+}
+class Administrador {
+    id_administrador : string
+}
+class Descuento {
+    id_descuento : string
+    porcentaje : number
+    descripcion : string
+}
+
+Cliente <|-- Pago
+Cliente <|-- Reserva
+
+Gerente <|-- Consumo
+Gerente <|-- Descuento
+
+EmpleadoMostrador <|-- Consumo
+EmpleadoMostrador <|-- Habitacion
+EmpleadoMostrador <|-- Reserva
+EmpleadoMostrador <|-- Factura
+@enduml
