@@ -39,12 +39,6 @@
                         Reserva
                     </a>
                 </li>
-                <!-- RECEPCION -->
-                <li class="nav-item">
-                    <a href="../recepcion/recepcion.html" class="nav-link">
-                        Recepcion
-                    </a>
-                </li>
                 <!-- PUNTO DE VENTA -->
                 <li class="nav-item dropdown">
                     <a href="../punto-de-venta/punto-venta.html" class="nav-link">
@@ -61,12 +55,6 @@
                 <li class="nav-item">
                     <a href="../clientes/clientes.html" class="nav-link">
                         Clientes
-                    </a>
-                </li>
-                <!-- REPORTES -->
-                <li class="nav-item dropdown">
-                    <a href="../reportes/reportes.html" class="nav-link seccion-reportes">
-                        Reportes
                     </a>
                 </li>
                 <!-- USUARIOS -->
@@ -160,109 +148,6 @@
                         </tfoot>
                     </table>
                 </div>
-            </div>
-        </div>
-
-        <!-- Modal users -->
-        <div class="modal fade" id="modalUsuario" tabindex="-1" aria-labelledby="exampleModalLabel">
-            <div class="modal-dialog modal-lg">
-                <form id="id-form-register-users">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Registrar nuevo usuario</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row g-2">
-                                <div class="col-sm-6">
-                                    <label for="id-nombres" class="form-label">Nombres</label>
-                                    <input type="text" class="form-control" id="id-nombres" name="nombres"
-                                        placeholder="" value="" required>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <label for="id-apellidos" class="form-label">Apellidos</label>
-                                    <input type="text" class="form-control" id="id-apellidos" name="apellidos"
-                                        placeholder="" value="" required>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <label for="id-username" class="form-label">Username</label>
-                                    <input type="text" class="form-control" id="id-username" name="username"
-                                        placeholder="" value="" required>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <label for="id-password" class="form-label">Password</label>
-                                    <input type="password" name="password" class="form-control" id="id-password-users"
-                                        required>
-                                    <div class="icon-password-users">
-                                        <i class="bi bi-eye-fill" id="id-icon-password-users"></i>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <label for="id-email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="id-email" name="email"
-                                        placeholder="" value="" required>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <label for="id-genero" class="form-label">Genero</label>
-                                    <select name="genero" id="id-genero" class="form-select" required>
-                                        <option>---</option>
-                                        <option value="MASCULINO">MASCULINO</option>
-                                        <option value="FEMENINO">FEMENINO</option>
-                                        <option value="OTROS">OTROS</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <label for="id-fecha-nacimiento" class="form-label">Fecha de nacimiento</label>
-                                    <input type="date" class="form-control" id="id-fecha-nacimiento" name="fechaNacimiento" required>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <label for="id-fecha-ingreso" class="form-label">Fecha de Ingreso</label>
-                                    <input type="date" class="form-control" id="id-fecha-ingreso" name="fechaIngreso" required>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <label for="id-telefono" class="form-label">Telefono</label>
-                                    <input type="text" class="form-control" id="id-telefono" name="telefono" required>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <label for="lastName" class="form-label">ID</label>
-                                    <input type="text" class="form-control" id="id-direccion" name="direccion" required>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <label for="id-cargo" class="form-label">Cargo</label>
-                                    <select name="cargo" id="id-cargo" class="form-select" required>
-                                        <option>---</option>
-                                        <option value="GERENTE">GERENTE</option>
-                                        <option value="ADMINISTRADOR">ADMINISTRADOR</option>
-                                        <option value="EMPLEADO">EMPLEADO</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <label for="id-estado" class="form-label">Estado</label>
-                                    <select name="estado" id="id-estado" class="form-select" required>
-                                        <option>---</option>
-                                        <option value="ACTIVO">ACTIVO</option>
-                                        <option value="INACTIVO">INACTIVO</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button class="btn btn-primary" type="submit">Agregar</button>
-                        </div>
-                    </div>
-                </form>
             </div>
         </div>
     </main>
