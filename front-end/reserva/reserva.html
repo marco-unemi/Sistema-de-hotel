@@ -120,7 +120,7 @@
 
     <main>
         <!-- modal presentacion-->
-        <div class="modal modal-lg fade" id="id-modal-respuesta" aria-hidden="true"
+        <div class="modal modal-lg fade" id="id-modal-imagenes" aria-hidden="true"
             aria-labelledby="exampleModalToggleLabel" tabindex="-1">
             <div class="modal-dialog ">
                 <div class="modal-content">
@@ -155,7 +155,7 @@
                     <div class="modal-body" id="id-modal-body">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>
@@ -164,7 +164,7 @@
         <!-- Modal Reserva -->
         <div class="modal fade" id="modalReserva" tabindex="-1" aria-labelledby="exampleModalLabel">
             <div class="modal-dialog modal-lg">
-                <form id="id-form-empleado" class="needs-validation" novalidate="">
+                <form id="id-form-reserva">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Registrar nuevo Hospedaje</h5>
@@ -253,8 +253,8 @@
                         <img src="../img/habitacion.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Suit Principal</h5>
-                            <button type="button" class="btn btn-primary btn-sm">Rerservar</button>
-                            <button type="button" class="btn btn-secondary btn-sm">Mas información</button>
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
+                            <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-1">Mas información</button>
                         </div>
                     </div>
                 </div>
@@ -263,8 +263,8 @@
                         <img src="../img/habitacion1.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Habitación Compartida</h5>
-                            <button type="button" class="btn btn-primary btn-sm">Rerservar</button>
-                            <button type="button" class="btn btn-secondary btn-sm">Mas información</button>
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
+                            <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-2">Mas información</button>
                         </div>
                     </div>
                 </div>
@@ -273,8 +273,8 @@
                         <img src="../img/habitacion2.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Suit Individual</h5>
-                            <button type="button" class="btn btn-primary btn-sm">Rerservar</button>
-                            <button type="button" class="btn btn-secondary btn-sm">Mas información</button>
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal">Rerservar</button>
+                            <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-3">Mas información</button>
                         </div>
                     </div>
                 </div>
@@ -283,8 +283,8 @@
                         <img src="../img/habitacion3.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Habitación delux</h5>
-                            <button type="button" class="btn btn-primary btn-sm">Rerservar</button>
-                            <button type="button" class="btn btn-secondary btn-sm">Mas información</button>
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
+                            <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-4">Mas información</button>
                         </div>
                     </div>
                 </div>
@@ -295,8 +295,8 @@
                         <img src="../img/habitacion.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Suit Empresarial</h5>
-                            <button type="button" class="btn btn-primary btn-sm">Rerservar</button>
-                            <button type="button" class="btn btn-secondary btn-sm">Mas información</button>
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
+                            <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-5">Mas información</button>
                         </div>
                     </div>
                 </div>
@@ -305,8 +305,8 @@
                         <img src="../img/habitacion1.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Habitación King-Size</h5>
-                            <button type="button" class="btn btn-primary btn-sm">Rerservar</button>
-                            <button type="button" class="btn btn-secondary btn-sm">Mas información</button>
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
+                            <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-6">Mas información</button>
                         </div>
                     </div>
                 </div>
@@ -315,8 +315,8 @@
                         <img src="../img/habitacion2.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Suit Individual</h5>
-                            <button type="button" class="btn btn-primary btn-sm">Rerservar</button>
-                            <button type="button" class="btn btn-secondary btn-sm">Mas información</button>
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
+                            <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-7">Mas información</button>
                         </div>
                     </div>
                 </div>
@@ -325,8 +325,8 @@
                         <img src="../img/habitacion3.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Suit Presidencial</h5>
-                            <button type="button" class="btn btn-primary btn-sm">Rerservar</button>
-                            <button type="button" class="btn btn-secondary btn-sm">Mas información</button>
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
+                            <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-8">Mas información</button>
                         </div>
                     </div>
                 </div>
@@ -337,8 +337,8 @@
                         <img src="../img/habitacion.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Habitación Matrimonial</h5>
-                            <button type="button" class="btn btn-primary btn-sm">Rerservar</button>
-                            <button type="button" class="btn btn-secondary btn-sm">Mas información</button>
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
+                            <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-9">Mas información</button>
                         </div>
                     </div>
                 </div>
@@ -347,8 +347,8 @@
                         <img src="../img/habitacion1.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Habitación Matrimonial</h5>
-                            <button type="button" class="btn btn-primary btn-sm">Rerservar</button>
-                            <button type="button" class="btn btn-secondary btn-sm">Mas información</button>
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
+                            <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-10">Mas información</button>
                         </div>
                     </div>
                 </div>
@@ -357,8 +357,8 @@
                         <img src="../img/habitacion2.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Habitación Familiar</h5>
-                            <button type="button" class="btn btn-primary btn-sm">Rerservar</button>
-                            <button type="button" class="btn btn-secondary btn-sm">Mas información</button>
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
+                            <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-11">Mas información</button>
                         </div>
                     </div>
                 </div>
@@ -367,8 +367,8 @@
                         <img src="../img/habitacion3.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Habitación Familiar</h5>
-                            <button type="button" class="btn btn-primary btn-sm">Rerservar</button>
-                            <button type="button" class="btn btn-secondary btn-sm">Mas información</button>
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
+                            <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-12">Mas información</button>
                         </div>
                     </div>
                 </div>

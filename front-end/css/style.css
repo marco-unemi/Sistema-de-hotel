@@ -54,6 +54,14 @@ main {
     cursor: pointer;
 }
 
+.icon-password-users {
+    position: absolute;
+    top: 30%;
+    right: 30px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
 /* Estilo para centrar el checkbox en la esquina izquierda */
 .custom-checkbox {
     position: absolute;
