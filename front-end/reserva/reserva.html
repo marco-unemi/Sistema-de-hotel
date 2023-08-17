@@ -1,4 +1,3 @@
-
 <!--archivo 1-->
 <!DOCTYPE html>
 <html lang="en">
@@ -116,36 +115,36 @@
                                 <div class="col-sm-6 px-5">
                                     <label for="firstName" class="form-label">C.Identidad</label>
                                     <input type="text" class="form-control" id="id-cedula" name="cedula" placeholder=""
-                                        value="" required>
+                                        value="">
                                 </div>
 
                                 <div class="col-sm-6 px-5">
                                     <label for="id-nombres-clientes" class="form-label">Nombres y Apellidos</label>
                                     <input type="text" class="form-control" id="id-nombres-clientes" name="nombres"
-                                        placeholder="" value="" required>
+                                        placeholder="" value="">
                                 </div>
 
                                 <div class="col-sm-6 px-5">
                                     <label for="id-fecha-reserva" class="form-label">Fecha de reserva</label>
-                                    <input type="date" class="form-control" id="id-fecha-reserva"
-                                        name="fechaReserva" placeholder="" value="" required>
+                                    <input type="date" class="form-control" id="id-fecha-reserva" name="fechaReserva"
+                                        placeholder="" value="">
                                 </div>
 
                                 <div class="col-sm-6 px-5">
                                     <label for="id-telefono" class="form-label">Telefono</label>
                                     <input type="text" class="form-control" id="id-telefono" name="telefono"
-                                        placeholder="" value="" required>
+                                        placeholder="" value="">
                                 </div>
 
                                 <div class="col-sm-7 px-5">
                                     <label for="id-correo" class="form-label">Correo Electronico</label>
                                     <input type="text" class="form-control" id="id-correo" name="correo" placeholder=""
-                                        value="" required>
+                                        value="">
                                 </div>
 
-                                <div class="col-sm-5 px-5">
+                                <div class="col-sm-5 px-5 pb-3">
                                     <label for="id-tipo-cliente" class="form-label">tipo cliente</label>
-                                    <select name="tipoCliente" id="id-tipo-cliente" class="form-select" required>
+                                    <select name="tipoCliente" id="id-tipo-cliente" class="form-select">
                                         <option value="NORMAL">NORMAL</option>
                                         <option value="EMPRESARIO">EMPRESARIO</option>
                                     </select>
@@ -153,9 +152,15 @@
 
                                 <hr>
 
+                                <div class="col-sm-7 px-5 pt-3">
+                                    <label for="id-tiempo-reserva" class="form-label">Tiempo de reserva</label>
+                                    <input type="number" class="form-control" id="id-tiempo-reserva"
+                                        name="tiempoReserva" placeholder="" value="">
+                                </div>
+
                                 <div class="col-sm-5 px-5">
                                     <label for="id-tipo-pago" class="form-label">Pago</label>
-                                    <select name="tipoPago" id="id-tipo-pago" class="form-select" required>
+                                    <select name="tipoPago" id="id-tipo-pago" class="form-select">
                                         <option>---</option>
                                         <option value="Efectivo">Efectivo</option>
                                         <option value="Tarjeta">Tarjeta de crédito</option>
@@ -168,17 +173,26 @@
                                         placeholder="" value="">
                                 </div>
 
-                                <div class="col-sm-6 px-5">
+                                <div class="col-sm-4 px-5">
                                     <label for="id-descuento" class="form-label">Descuento</label>
                                     <input type="number" class="form-control" id="id-descuento" name="descuento"
-                                        placeholder="" value="0" required>
+                                        placeholder="" value="0">
                                 </div>
 
+                                <div class="col-sm-12 px-5 py-3">
+                                    <a class="btn btn-dark" id="btn-calcular-total-pagar">Calcular total a pagar</a>
+                                </div>
+
+                                <div class="col-sm-12 px-5 pb-3">
+                                    <label for="id-monto" class="form-label">Total a pagar</label>
+                                    <input type="number" class="form-control" id="id-monto" name="monto" placeholder=""
+                                        value="" readonly>
+                                </div>
                             </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button class="btn btn-primary" type="submit">Agregar</button>
+                            <button class="btn btn-primary" type="submit" id="reservarButton">Agregar</button>
                         </div>
                     </div>
                 </form>
@@ -210,9 +224,17 @@
                         <div class="card h-100">
                             <img src="../img/habitacion.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title pb-3">Suit Principal</h5>
-                                <button type="button" class="btn btn-primary btn-sm w-50" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                <h5 class="card-title pb-3">Habitacion 101</h5>
+                                <button type="button" class="btn btn-primary btn-sm w-50 btn-reserva"
+                                    data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal"
+                                    data-nombre-habitacion="Suit Principal" data-numero-habitacion="101"
+                                    data-status="reservar">
+                                    Reservar
+                                </button>
+                                <button type="button" class="btn btn-danger btn-sm w-50 btn-reservado"
+                                    data-nombre-habitacion="Suit Principal" data-numero-habitacion="101"
+                                    data-status="reservado" style="display: none;">
+                                    Reservado
                                 </button>
                             </div>
                         </div>
@@ -221,9 +243,17 @@
                         <div class="card h-100">
                             <img src="../img/habitacion1.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Habitación Compartida</h5>
-                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                <h5 class="card-title pb-3">Habitación 102</h5>
+                                <button type="button" class="btn btn-primary btn-sm w-50 btn-reserva-habitacion-102"
+                                    data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal"
+                                    data-nombre-habitacion="Suit Secundaria" data-numero-habitacion="102"
+                                    data-status="reservar">
+                                    Reservar
+                                </button>
+                                <button type="button" class="btn btn-danger btn-sm w-50 btn-reservado-habitacion-102"
+                                    data-nombre-habitacion="Suit Secundaria" data-numero-habitacion="102"
+                                    data-status="reservado" style="display: none;">
+                                    Reservado
                                 </button>
                             </div>
                         </div>
@@ -232,9 +262,17 @@
                         <div class="card h-100">
                             <img src="../img/habitacion2.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Suit Individual</h5>
-                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Rerservar
+                                <h5 class="card-title pb-3">Habitacion 103</h5>
+                                <button type="button" class="btn btn-primary btn-sm w-50 btn-reserva-habitacion-103"
+                                    data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal"
+                                    data-nombre-habitacion="Suit Tercera" data-numero-habitacion="103"
+                                    data-status="reservar">
+                                    Reservar
+                                </button>
+                                <button type="button" class="btn btn-danger btn-sm w-50 btn-reservado-habitacion-103"
+                                    data-nombre-habitacion="Suit Tercera" data-numero-habitacion="103"
+                                    data-status="reservado" style="display: none;">
+                                    Reservado
                                 </button>
                             </div>
                         </div>
@@ -243,9 +281,17 @@
                         <div class="card h-100">
                             <img src="../img/habitacion.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Habitación Matrimonial</h5>
-                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                <h5 class="card-title pb-3">Habitación 104</h5>
+                                <button type="button" class="btn btn-primary btn-sm w-50 btn-reserva-habitacion-104"
+                                    data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal"
+                                    data-nombre-habitacion="Suit Cuarta" data-numero-habitacion="104"
+                                    data-status="reservar">
+                                    Reservar
+                                </button>
+                                <button type="button" class="btn btn-danger btn-sm w-50 btn-reservado-habitacion-104"
+                                    data-nombre-habitacion="Suit Cuarta" data-numero-habitacion="104"
+                                    data-status="reservado" style="display: none;">
+                                    Reservado
                                 </button>
                             </div>
                         </div>
@@ -254,9 +300,17 @@
                         <div class="card h-100">
                             <img src="../img/habitacion1.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Habitación Matrimonial</h5>
-                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                <h5 class="card-title pb-3">Habitación 105</h5>
+                                <button type="button" class="btn btn-primary btn-sm w-50 btn-reserva-habitacion-105"
+                                    data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal"
+                                    data-nombre-habitacion="Suit Quinta" data-numero-habitacion="105"
+                                    data-status="reservar">
+                                    Reservar
+                                </button>
+                                <button type="button" class="btn btn-danger btn-sm w-50 btn-reservado-habitacion-105"
+                                    data-nombre-habitacion="Suit Quinta" data-numero-habitacion="105"
+                                    data-status="reservado" style="display: none;">
+                                    Reservado
                                 </button>
                             </div>
                         </div>
@@ -265,9 +319,16 @@
                         <div class="card h-100">
                             <img src="../img/habitacion2.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Habitación Familiar</h5>
-                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                <button type="button" class="btn btn-primary btn-sm w-50 btn-reserva-habitacion-106"
+                                    data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal"
+                                    data-nombre-habitacion="Suit Sexta" data-numero-habitacion="106"
+                                    data-status="reservar">
+                                    Reservar
+                                </button>
+                                <button type="button" class="btn btn-danger btn-sm w-50 btn-reservado-habitacion-106"
+                                    data-nombre-habitacion="Suit Sexta" data-numero-habitacion="106"
+                                    data-status="reservado" style="display: none;">
+                                    Reservado
                                 </button>
                             </div>
                         </div>
@@ -276,15 +337,24 @@
                         <div class="card h-100">
                             <img src="../img/habitacion3.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Habitación Familiar</h5>
-                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                <h5 class="card-title pb-3">Habitación 107</h5>
+                                <button type="button" class="btn btn-primary btn-sm w-50 btn-reserva-habitacion-107"
+                                    data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal"
+                                    data-nombre-habitacion="Suit Septima" data-numero-habitacion="107"
+                                    data-status="reservar">
+                                    Reserva
+                                </button>
+                                <button type="button" class="btn btn-danger btn-sm w-50 btn-reservado-habitacion-107"
+                                    data-nombre-habitacion="Suit Septima" data-numero-habitacion="107"
+                                    data-status="reservado" style="display: none;">
+                                    Reservado
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="tab-pane fade" id="habitacion-empresarial-tab-pane" role="tabpanel"
                 aria-labelledby="habitacion-empresarial-tab" tabindex="0">
                 <div class="row row-cols-1 row-cols-md-4 p-5">
@@ -292,9 +362,17 @@
                         <div class="card h-100">
                             <img src="../img/habitacion3.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Habitación delux</h5>
-                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                <h5 class="card-title">Habitación 1000</h5>
+                                <button type="button" class="btn btn-primary btn-sm w-50 btn-reserva-habitacion-1000"
+                                    data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal"
+                                    data-nombre-habitacion="Suit Decima" data-numero-habitacion="1000"
+                                    data-status="reservar">
+                                    Reserva
+                                </button>
+                                <button type="button" class="btn btn-danger btn-sm w-50 btn-reservado-habitacion-1000"
+                                    data-nombre-habitacion="Suit Decima" data-numero-habitacion="1000"
+                                    data-status="reservado" style="display: none;">
+                                    Reservado
                                 </button>
                             </div>
                         </div>
@@ -303,9 +381,17 @@
                         <div class="card h-100">
                             <img src="../img/habitacion.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Suit Empresarial</h5>
-                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                <h5 class="card-title">Habitacion 1010</h5>
+                                <button type="button" class="btn btn-primary btn-sm w-50 btn-reserva-habitacion-1010"
+                                    data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal"
+                                    data-nombre-habitacion="Suit Onceava" data-numero-habitacion="1010"
+                                    data-status="reservar">
+                                    Reserva
+                                </button>
+                                <button type="button" class="btn btn-danger btn-sm w-50 btn-reservado-habitacion-1010"
+                                    data-nombre-habitacion="Suit Onceava" data-numero-habitacion="1010"
+                                    data-status="reservado" style="display: none;">
+                                    Reservado
                                 </button>
                             </div>
                         </div>
@@ -314,9 +400,17 @@
                         <div class="card h-100">
                             <img src="../img/habitacion1.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Habitación King-Size</h5>
-                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                <h5 class="card-title">Habitación 1020</h5>
+                                <button type="button" class="btn btn-primary btn-sm w-50 btn-reserva-habitacion-1020"
+                                    data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal"
+                                    data-nombre-habitacion="Suit Doceava" data-numero-habitacion="1020"
+                                    data-status="reservar">
+                                    Reserva
+                                </button>
+                                <button type="button" class="btn btn-danger btn-sm w-50 btn-reservado-habitacion-1020"
+                                    data-nombre-habitacion="Suit Doceava" data-numero-habitacion="1020"
+                                    data-status="reservado" style="display: none;">
+                                    Reservado
                                 </button>
                             </div>
                         </div>
@@ -325,9 +419,17 @@
                         <div class="card h-100">
                             <img src="../img/habitacion2.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Suit Individual</h5>
-                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                <h5 class="card-title">Habitacion 1030</h5>
+                                <button type="button" class="btn btn-primary btn-sm w-50 btn-reserva-habitacion-1030"
+                                    data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal"
+                                    data-nombre-habitacion="Suit Treceava" data-numero-habitacion="1030"
+                                    data-status="reservar">
+                                    Reserva
+                                </button>
+                                <button type="button" class="btn btn-danger btn-sm w-50 btn-reservado-habitacion-1030"
+                                    data-nombre-habitacion="Suit Treceava" data-numero-habitacion="1030"
+                                    data-status="reservado" style="display: none;">
+                                    Reservado
                                 </button>
                             </div>
                         </div>
@@ -337,8 +439,16 @@
                             <img src="../img/habitacion3.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Suit Presidencial</h5>
-                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                <button type="button" class="btn btn-primary btn-sm w-50 btn-reserva-habitacion-1040"
+                                    data-bs-toggle="modal" data-bs-target="#modalReserva" data-bs-dismiss="modal"
+                                    data-nombre-habitacion="Suit Catorceava" data-numero-habitacion="1040"
+                                    data-status="reservar">
+                                    Reserva
+                                </button>
+                                <button type="button" class="btn btn-danger btn-sm w-50 btn-reservado-habitacion-1040"
+                                    data-nombre-habitacion="Suit Catorceava" data-numero-habitacion="1040"
+                                    data-status="reservado" style="display: none;">
+                                    Reservado
                                 </button>
                             </div>
                         </div>
@@ -355,4 +465,3 @@
 </body>
 
 </html>
-

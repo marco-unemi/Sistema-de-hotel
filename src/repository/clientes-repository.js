@@ -13,8 +13,11 @@ export class ClienteRepository {
                 c.telefono, 
                 c.correo, 
                 c.tipoCliente, 
+                c.tiempoReserva, 
                 c.tipoPago, 
-                c.descuento
+                c.numeroTarjeta, 
+                c.descuento,
+                c.monto
             )
         })
     }

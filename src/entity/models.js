@@ -9,48 +9,25 @@ export class Hotel {
         this.tipoMoneda = tipoMoneda;
     }
 }
-class Pago {
-    constructor(tipoPago, monto, fecha) {
-        this.tipoPago = tipoPago
-        this.monto = monto
-        this.fecha = fecha
-    }
-}
- export class Cliente {
-    constructor(nombres, cedula, fechaReserva, telefono, correo, tipoCliente, tipoPago, descuento) {
+
+export class Cliente {
+    constructor(nombres, cedula, fechaReserva, telefono, correo, tipoCliente, tiempoReserva, tipoPago, numeroTarjeta, descuento, monto) {
         this.nombres = nombres
         this.cedula = cedula
         this.fechaReserva = new Date(fechaReserva)
         this.telefono = telefono
         this.correo = correo
         this.tipoCliente = tipoCliente
+        this.tiempoReserva = tiempoReserva
         this.tipoPago = tipoPago
+        this.numeroTarjeta = numeroTarjeta
         this.descuento = descuento
+        this.monto = monto
     }
 }
 export class Habitacion {
-    constructor(numeroHabitacion, estado) {
+    constructor(numeroHabitacion, precio) {
         this.numeroHabitacion = numeroHabitacion
-        this.estado = estado
-    }
-}
-class Reserva {
-    constructor(fechaReserva) {
-        this.fechaReserva = fechaReserva
-    }
-}
-class Factura {
-    constructor() {
-
-    }
-}
-class Consumo {
-    constructor() {
-
-    }
-}
-class Descuento {
-    constructor() {
-
+        this.precio = precio
     }
 }
