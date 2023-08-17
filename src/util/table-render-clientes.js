@@ -7,7 +7,9 @@ export function renderClientes(clientes) {
             <td>${c.correo}</td>
             <td>${new Date(c.fechaReserva).toLocaleDateString("en-US")}</td>
             <td>${c.telefono}</td>
-
+            <td><button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Factura
+            </button></td>
         </tr>`
     }).join('')
 }

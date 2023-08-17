@@ -38,7 +38,7 @@
                     </a>
                 </li>
                 <!-- PUNTO DE VENTA -->
-                <li class="nav-item dropdown">       
+                <li class="nav-item dropdown">
                     <a href="../punto-de-venta/punto-venta.html" class="nav-link">
                         Punto de venta
                     </a>
@@ -57,11 +57,13 @@
                 </li>
                 <!-- CONFIGURACION -->
                 <li class="nav-item dropdown seccion-configuracion">
-                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         Configuracion
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="../configuracion/informacion-hotel.html">Informacion Hotel</a></li>
+                        <li><a class="dropdown-item" href="../configuracion/informacion-hotel.html">Informacion
+                                Hotel</a></li>
                         <li><a class="dropdown-item" href="../configuracion/habitaciones.html">Habitaciones</a></li>
                     </ul>
                 </li>
@@ -70,28 +72,28 @@
 
         <div class="collapse navbar-collapse flex-grow-0 mx-5" id="contenido-nav">
             <ul class="navbar-nav">
-              <!-- INFORMACION -->
-              <li class="nav-item dropdown">
-                  <div class="btn-group">
-                    <a href="#" class="nav-link dropdown" id="btn-dropdown-informacion" data-bs-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="true">
-                        <i class="bi bi-person-circle"></i>
-                    </a>
-                      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="btn-dropdown-informacion"
-                          style="width: auto;">
-                          <li><a href="../perfil/perfil.html" class="dropdown-item" id="">Perfil</a></li>
-                          <li>
-                              <hr class="dropdown-divider">
-                          </li>
-                          <li class="text-center">
-                              <button class="btn btn-outline-danger" id="id-btn-cerrar-sesion">
-                                  <i class="bi bi-backspace"></i>
-                                  Cerrar sesion
-                              </button>
-                          </li>
-                      </ul>
-                  </div>
-              </li>
+                <!-- INFORMACION -->
+                <li class="nav-item dropdown">
+                    <div class="btn-group">
+                        <a href="#" class="nav-link dropdown" id="btn-dropdown-informacion" data-bs-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="true">
+                            <i class="bi bi-person-circle"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark"
+                            aria-labelledby="btn-dropdown-informacion" style="width: auto;">
+                            <li><a href="../perfil/perfil.html" class="dropdown-item" id="">Perfil</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="text-center">
+                                <button class="btn btn-outline-danger" id="id-btn-cerrar-sesion">
+                                    <i class="bi bi-backspace"></i>
+                                    Cerrar sesion
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
@@ -124,6 +126,106 @@
                         <tfoot>
                         </tfoot>
                     </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="row">
+                        <div class="col-sm-12 mb-3 mb-sm-0">
+                            <div class="card">
+                                <div class="card-header text-white">
+                                    <h3 class="card-title">Factura</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row p-3">
+                                        <div class="col-sm-4">
+                                            <label for="id-nombre" class="form-label">Empresa:</label>
+                                            <input type="text" class="form-control" id="id-nombre" name="nombre"
+                                            placeholder="" value="Luminar" readonly>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <label for="id-nombre" class="form-label">Ruc:</label>
+                                            <input type="text" class="form-control" id="id-nombre" name="nombre"
+                                            placeholder="" value="123456" readonly>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <label for="id-nombre" class="form-label">Nro:</label>
+                                            <input type="text" class="form-control" id="id-nombre" name="nombre"
+                                            placeholder="" value="002" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row p-3">
+                                        <div class="col-sm-8">
+                                            <label for="id-nombre" class="form-label">Direccion:</label>
+                                            <input type="text" class="form-control" id="id-nombre" name="nombre"
+                                            placeholder="" value="El triunfo" readonly>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <label for="id-nombre" class="form-label">Fecha:</label>
+                                            <input type="date" class="form-control" id="id-nombre" name="nombre"
+                                            placeholder="" value="" required>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <h3>Productos comprados por el cliente</h3>
+                                    <div class="row p-3">
+                                        <div class="col-sm-6">
+                                            <label for="id-" class="form-label">Habitacion reservada:</label>
+                                            <input type="text" class="form-control" id="id-" name=""
+                                            placeholder="" value="" readonly>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="id-" class="form-label">Precio de la habitacion:</label>
+                                            <input type="" class="form-control" id="id-" name=""
+                                            placeholder="" value="" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row p-3">
+                                        <div class="col-sm-6">
+                                            <label for="id-" class="form-label">Servicios solicitados:</label>
+                                            <input type="text" class="form-control" id="id-" name=""
+                                            placeholder="" value="" readonly>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="id-" class="form-label">Precio de los servicios:</label>
+                                            <input type="" class="form-control" id="id-" name=""
+                                            placeholder="" value="" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row p-3">
+                                        <div class="col-sm-6">
+                                            <label for="id-" class="form-label">Total a pagar:</label>
+                                            <input type="text" class="form-control" id="id-" name=""
+                                            placeholder="" value="" readonly>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="id-tipo-pago" class="form-label">Pago</label>
+                                            <select name="tipoPago" id="id-tipo-pago" class="form-select">
+                                                <option>---</option>
+                                                <option value="Efectivo">Efectivo</option>
+                                                <option value="Tarjeta">Tarjeta de crédito</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row p-3">
+                                        <div class="col-sm-12" id="tarjeta-input-container" style="display: none;">
+                                            <label for="id-numero-tarjeta" class="form-label">Número de Tarjeta</label>
+                                            <input type="text" class="form-control" id="id-numero-tarjeta" name="numeroTarjeta"
+                                            placeholder="" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-end">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

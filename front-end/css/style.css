@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to right, antiquewhite 0%, #B89D80 100%);
+    background: linear-gradient(to right, rgb(223, 218, 213), antiquewhite 0%, #B89D80 100%);
 }
 
 .name-hotel {
@@ -72,7 +72,7 @@ main {
     /* Ajusta según sea necesario para centrar verticalmente */
 }
 
-/* Estilo para centrar el ícono del ojo en el input de contraseña */
+/* Estilo para centrar el ícono del ojo en el input de contraseña del registo*/
 .input-group-text.icon-password-registro {
     display: flex;
     align-items: center;
@@ -129,8 +129,7 @@ td,
     border-color: black;
 }
 
-.card-header,
-.bg-thead {
+.card-header, .bg-thead {
     background-color: black;
 }
 
@@ -151,12 +150,6 @@ td,
 .card-hotel {
     border-color: black;
 }
-
-.btn-reserva-cartas-reservado {
-    background-color: red;
-    color: white;
-}
-
 
 /*estilo de inicio*/
 .flex-1 {
@@ -270,11 +263,26 @@ footer * {
     /* Centrar la imagen horizontalmente */
 }
 
-.img-fluid {
-    max-width: 70%;
-    height: auto;
+.mytab-content {
+    padding: 20px;
   }
-  .product-card {
-    margin: 10px;
-    text-align: center;
+
+  .tab-pane h4 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .services-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .tab-pane i {
+    margin-right: 10px;
+  }
+
+  .tab-pane p {
+    font-size: 16px;
+    margin: 8px 0;
   }

@@ -10,3 +10,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
   let template = renderClientes(clientes)
   tableClientes.innerHTML = template
 })
+const tipoPagoSelect = document.getElementById("id-tipo-pago");
+const tarjetaInputContainer = document.getElementById("tarjeta-input-container");
+tipoPagoSelect.addEventListener("change", function () {
+    if (tipoPagoSelect.value === "Tarjeta") {
+        tarjetaInputContainer.style.display = "block";
+    } else {
+        tarjetaInputContainer.style.display = "none";
+    }
+});
