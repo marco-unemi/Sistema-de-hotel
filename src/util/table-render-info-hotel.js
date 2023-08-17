@@ -1,7 +1,3 @@
-
-
-//archivo 4
-
 export function renderHotel(hotel) {
     return hotel.map((h) => {
         return `<tr>

@@ -23,7 +23,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!--nav content-->
-         <div class="collapse navbar-collapse flex-grow-0 mx-5" id="contenido-nav">
+        <div class="collapse navbar-collapse flex-grow-0 mx-5" id="contenido-nav">
             <ul class="navbar-nav">
                 <!-- INICIO -->
                 <li class="nav-item">
@@ -38,15 +38,9 @@
                     </a>
                 </li>
                 <!-- PUNTO DE VENTA -->
-                <li class="nav-item dropdown">       
+                <li class="nav-item dropdown">
                     <a href="../punto-de-venta/punto-venta.html" class="nav-link">
                         Punto de venta
-                    </a>
-                </li>
-                <!-- VERIFICACION DE SALIDAS -->
-                <li class="nav-item">
-                    <a href="../verificacion salidas/verificacion-salidas.html" class="nav-link">
-                        Verificacion de salidas
                     </a>
                 </li>
                 <!-- CLIENTES -->
@@ -63,7 +57,8 @@
                 </li>
                 <!-- CONFIGURACION -->
                 <li class="nav-item active dropdown seccion-configuracion">
-                    <a href="#" class="nav-link active dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a href="#" class="nav-link active dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         Configuracion
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark">
@@ -76,52 +71,57 @@
 
         <div class="collapse navbar-collapse flex-grow-0 mx-5" id="contenido-nav">
             <ul class="navbar-nav">
-              <!-- INFORMACION -->
-              <li class="nav-item dropdown">
-                  <div class="btn-group">
-                    <a href="#" class="nav-link dropdown" id="btn-dropdown-informacion" data-bs-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="true">
-                        <i class="bi bi-person-circle"></i>
-                    </a>
-                      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="btn-dropdown-informacion"
-                          style="width: auto;">
-                          <li><a href="../perfil/perfil.html" class="dropdown-item" id="">Perfil</a></li>
-                          <li>
-                              <hr class="dropdown-divider">
-                          </li>
-                          <li class="text-center">
-                              <button class="btn btn-outline-danger" id="id-btn-cerrar-sesion">
-                                  <i class="bi bi-backspace"></i>
-                                  Cerrar sesion
-                              </button>
-                          </li>
-                      </ul>
-                  </div>
-              </li>
+                <!-- INFORMACION -->
+                <li class="nav-item dropdown">
+                    <div class="btn-group">
+                        <a href="#" class="nav-link dropdown" id="btn-dropdown-informacion" data-bs-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="true">
+                            <i class="bi bi-person-circle"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark"
+                            aria-labelledby="btn-dropdown-informacion" style="width: auto;">
+                            <li><a href="../perfil/perfil.html" class="dropdown-item" id="">Perfil</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="text-center">
+                                <button class="btn btn-outline-danger" id="id-btn-cerrar-sesion">
+                                    <i class="bi bi-backspace"></i>
+                                    Cerrar sesion
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
 
-    <!-- modal presentacion-->
-    <div class="modal fade" id="id-modal-respuesta" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
-        tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body text-center fw-semibold" id="id-modal-body" style="font-size: 20px;">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Aceptar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <main>
         <i class="bi bi-gear-fill configuracion"></i>
         <h2 class="d-inline-block">HABITACIONES</h2>
+
+        <!-- Agrega este formulario al final de tu contenido en el archivo HTML -->
+        <div class="col mb-4 w-50 p-5 mx-auto">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Agregar Nueva Habitación</h5>
+                    <form id="form-nueva-habitacion">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre de la Habitación</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="numero" class="form-label">Numero de la Habitación</label>
+                            <input type="text" class="form-control" id="numero" required>
+                        </div>
+                        <!-- Agrega más campos según tus necesidades -->
+                        <button type="submit" class="btn btn-primary">Agregar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

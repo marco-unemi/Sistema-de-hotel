@@ -16,26 +16,27 @@ class Pago {
         this.fecha = fecha
     }
 }
-class Cliente {
-    constructor(nombres, apellidos, genero, fechaNacimiento, telefono, correo, tipoCliente) {
+ export class Cliente {
+    constructor(nombres, cedula, fechaReserva, telefono, correo, tipoCliente, tipoPago, descuento) {
         this.nombres = nombres
-        this.apellidos = apellidos
-        this.genero = genero
-        this.fechaNacimiento = fechaNacimiento
+        this.cedula = cedula
+        this.fechaReserva = new Date(fechaReserva)
         this.telefono = telefono
         this.correo = correo
         this.tipoCliente = tipoCliente
+        this.tipoPago = tipoPago
+        this.descuento = descuento
     }
 }
-class Habitacion {
+export class Habitacion {
     constructor(numeroHabitacion, estado) {
         this.numeroHabitacion = numeroHabitacion
         this.estado = estado
     }
 }
 class Reserva {
-    constructor() {
-
+    constructor(fechaReserva) {
+        this.fechaReserva = fechaReserva
     }
 }
 class Factura {

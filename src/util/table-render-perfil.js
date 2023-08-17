@@ -1,5 +1,3 @@
-
-//ARCHIVO 5
 export function renderPerfil(user) {
     return `
         <tr>

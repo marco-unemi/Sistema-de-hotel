@@ -1,3 +1,5 @@
+
+<!--archivo 1-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,12 +45,6 @@
                         Punto de venta
                     </a>
                 </li>
-                <!-- VERIFICACION DE SALIDAS -->
-                <li class="nav-item">
-                    <a href="../verificacion salidas/verificacion-salidas.html" class="nav-link">
-                        Verificacion de salidas
-                    </a>
-                </li>
                 <!-- CLIENTES -->
                 <li class="nav-item">
                     <a href="../clientes/clientes.html" class="nav-link">
@@ -71,8 +67,6 @@
                         <li><a class="dropdown-item" href="../configuracion/informacion-hotel.html">Informacion
                                 Hotel</a></li>
                         <li><a class="dropdown-item" href="../configuracion/habitaciones.html">Habitaciones</a></li>
-                        <li><a class="dropdown-item" href="../configuracion/categorias.html">Categorias</a></li>
-                        <li><a class="dropdown-item" href="../configuracion/niveles.html">Niveles</a></li>
                     </ul>
                 </li>
             </ul>
@@ -107,48 +101,6 @@
     </nav>
 
     <main>
-        <!-- modal informacion -->
-        <div class="modal modal-lg fade" id="id-modal-imagenes" aria-hidden="true"
-            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-            <div class="modal-dialog ">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2 class="modal-title" id="exampleModalToggleLabel">Informacion</h2>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div id="carouselExample" class="carousel slide" data-bs-slide-to="2">
-                        <h4>Galeria de imagenes</h4>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="../img/habitacion.jpeg" class="d-block w-100 img-carusel" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="../img/habitacion1.jpeg" class="d-block w-100 img-carusel" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="../img/habitacion2.jpeg" class="d-block w-100 img-carusel" alt="...">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    <div class="modal-body" id="id-modal-body">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Modal Reserva -->
         <div class="modal fade" id="modalReserva" tabindex="-1" aria-labelledby="exampleModalLabel">
             <div class="modal-dialog modal-lg">
@@ -161,70 +113,72 @@
                         <div class="modal-body">
 
                             <div class="row g-2">
-                                <div class="col-sm-6">
+                                <div class="col-sm-6 px-5">
                                     <label for="firstName" class="form-label">C.Identidad</label>
                                     <input type="text" class="form-control" id="id-cedula" name="cedula" placeholder=""
                                         value="" required>
                                 </div>
-                                <div class="col-sm-6"></div>
 
-                                <div class="col-sm-6">
-                                    <label for="firstName" class="form-label">Nombres</label>
-                                    <input type="text" class="form-control" id="id-nombres" name="nombres"
+                                <div class="col-sm-6 px-5">
+                                    <label for="id-nombres-clientes" class="form-label">Nombres y Apellidos</label>
+                                    <input type="text" class="form-control" id="id-nombres-clientes" name="nombres"
                                         placeholder="" value="" required>
                                 </div>
 
-                                <div class="col-sm-6">
-                                    <label for="lastName" class="form-label">Apellidos</label>
-                                    <input type="text" class="form-control" id="id-apellidos" name="apellidos"
-                                        placeholder="" value="" required>
+                                <div class="col-sm-6 px-5">
+                                    <label for="id-fecha-reserva" class="form-label">Fecha de reserva</label>
+                                    <input type="date" class="form-control" id="id-fecha-reserva"
+                                        name="fechaReserva" placeholder="" value="" required>
                                 </div>
 
-                                <div class="col-sm-6">
-                                    <label for="lastName" class="form-label">Fecha de Nacimiento</label>
-                                    <input type="date" class="form-control" id="id-fecha-nacimiento"
-                                        name="fechaNacimiento" placeholder="" value="" required>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <label for="lastName" class="form-label">Telefono</label>
+                                <div class="col-sm-6 px-5">
+                                    <label for="id-telefono" class="form-label">Telefono</label>
                                     <input type="text" class="form-control" id="id-telefono" name="telefono"
                                         placeholder="" value="" required>
                                 </div>
 
-                                <div class="col-sm-8">
-                                    <label for="lastName" class="form-label">Correo Electronico</label>
+                                <div class="col-sm-7 px-5">
+                                    <label for="id-correo" class="form-label">Correo Electronico</label>
                                     <input type="text" class="form-control" id="id-correo" name="correo" placeholder=""
                                         value="" required>
                                 </div>
 
-                                <div class="col-sm-4">
-                                    <label for="lastName" class="form-label">Genero</label>
-                                    <select name="genero" id="id-genero" class="form-select" required>
-                                        <option>---</option>
-                                        <option value="M">Masculino</option>
-                                        <option value="F">Femenino</option>
-                                        <option value="O">Otros</option>
+                                <div class="col-sm-5 px-5">
+                                    <label for="id-tipo-cliente" class="form-label">tipo cliente</label>
+                                    <select name="tipoCliente" id="id-tipo-cliente" class="form-select" required>
+                                        <option value="NORMAL">NORMAL</option>
+                                        <option value="EMPRESARIO">EMPRESARIO</option>
                                     </select>
                                 </div>
 
-                                <div class="col-sm-12">
-                                    <label for="lastName" class="form-label">Direccion</label>
-                                    <input type="text" class="form-control" id="id-direccion" name="direccion"
-                                        placeholder="" value="" required>
+                                <hr>
+
+                                <div class="col-sm-5 px-5">
+                                    <label for="id-tipo-pago" class="form-label">Pago</label>
+                                    <select name="tipoPago" id="id-tipo-pago" class="form-select" required>
+                                        <option>---</option>
+                                        <option value="Efectivo">Efectivo</option>
+                                        <option value="Tarjeta">Tarjeta de crédito</option>
+                                    </select>
                                 </div>
 
-
-                                <div class="col-sm-6">
-                                    <label for="lastName" class="form-label">Fecha de Ingreso</label>
-                                    <input type="date" class="form-control" id="id-fecha-ingreso" name="fechaIngreso"
-                                        placeholder="" value="" required>
+                                <div class="col-sm-7 px-5" id="tarjeta-input-container" style="display: none;">
+                                    <label for="id-numero-tarjeta" class="form-label">Número de Tarjeta</label>
+                                    <input type="text" class="form-control" id="id-numero-tarjeta" name="numeroTarjeta"
+                                        placeholder="" value="">
                                 </div>
+
+                                <div class="col-sm-6 px-5">
+                                    <label for="id-descuento" class="form-label">Descuento</label>
+                                    <input type="number" class="form-control" id="id-descuento" name="descuento"
+                                        placeholder="" value="0" required>
+                                </div>
+
                             </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button class="btn btn-primary" data-bs-dismiss="modal" type="submit">Agregar</button>
+                            <button class="btn btn-primary" type="submit">Agregar</button>
                         </div>
                     </div>
                 </form>
@@ -236,38 +190,30 @@
 
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="habitacion-normal-tab" data-bs-toggle="tab" data-bs-target="#habitacion-normal-tab-pane"
-                    type="button" role="tab" aria-controls="habitacion-normal-tab-pane" aria-selected="true">Habitaciones
+                <button class="nav-link active" id="habitacion-normal-tab" data-bs-toggle="tab"
+                    data-bs-target="#habitacion-normal-tab-pane" type="button" role="tab"
+                    aria-controls="habitacion-normal-tab-pane" aria-selected="true">Habitaciones
                     Normales</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="habitacion-empresarial-tab" data-bs-toggle="tab" data-bs-target="#habitacion-empresarial-tab-pane"
-                    type="button" role="tab" aria-controls="habitacion-empresarial-tab-pane" aria-selected="false">Habitaciones
+                <button class="nav-link" id="habitacion-empresarial-tab" data-bs-toggle="tab"
+                    data-bs-target="#habitacion-empresarial-tab-pane" type="button" role="tab"
+                    aria-controls="habitacion-empresarial-tab-pane" aria-selected="false">Habitaciones
                     Empresariales</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="habitacion-matrimonial-tab" data-bs-toggle="tab" data-bs-target="#habitacion-matrimonial-tab-pane"
-                    type="button" role="tab" aria-controls="habitacion-matrimonial-tab-pane" aria-selected="false">Habitaciones
-                    Matrimoniales</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="habitacion-familiar-tab" data-bs-toggle="tab" data-bs-target="#habitacion-familiar-tab-pane"
-                    type="button" role="tab" aria-controls="habitacion-familiar-tab-pane" aria-selected="false">Habitaciones
-                    Familiares</button>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="habitacion-normal-tab-pane" role="tabpanel" aria-labelledby="habitacion-normal-tab" tabindex="0">
+            <div class="tab-pane fade show active" id="habitacion-normal-tab-pane" role="tabpanel"
+                aria-labelledby="habitacion-normal-tab" tabindex="0">
                 <div class="row row-cols-1 row-cols-md-4 p-5">
                     <div class="col mb-4">
                         <div class="card h-100">
                             <img src="../img/habitacion.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Suit Principal</h5>
-                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
-                                <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-1">Mas
-                                    información</button>
+                                <h5 class="card-title pb-3">Suit Principal</h5>
+                                <button type="button" class="btn btn-primary btn-sm w-50" data-bs-toggle="modal"
+                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -277,9 +223,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Habitación Compartida</h5>
                                 <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
-                                <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-2">Mas
-                                    información</button>
+                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -289,15 +234,59 @@
                             <div class="card-body">
                                 <h5 class="card-title">Suit Individual</h5>
                                 <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Rerservar</button>
-                                <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-3">Mas
-                                    información</button>
+                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Rerservar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card h-100">
+                            <img src="../img/habitacion.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Habitación Matrimonial</h5>
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card h-100">
+                            <img src="../img/habitacion1.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Habitación Matrimonial</h5>
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card h-100">
+                            <img src="../img/habitacion2.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Habitación Familiar</h5>
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card h-100">
+                            <img src="../img/habitacion3.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Habitación Familiar</h5>
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="habitacion-empresarial-tab-pane" role="tabpanel" aria-labelledby="habitacion-empresarial-tab" tabindex="0">
+            <div class="tab-pane fade" id="habitacion-empresarial-tab-pane" role="tabpanel"
+                aria-labelledby="habitacion-empresarial-tab" tabindex="0">
                 <div class="row row-cols-1 row-cols-md-4 p-5">
                     <div class="col mb-4">
                         <div class="card h-100">
@@ -305,9 +294,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Habitación delux</h5>
                                 <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
-                                <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-4">Mas
-                                    información</button>
+                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -317,9 +305,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Suit Empresarial</h5>
                                 <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
-                                <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-5">Mas
-                                    información</button>
+                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -329,9 +316,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Habitación King-Size</h5>
                                 <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
-                                <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-6">Mas
-                                    información</button>
+                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -341,9 +327,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Suit Individual</h5>
                                 <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
-                                <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-7">Mas
-                                    información</button>
+                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -353,66 +338,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Suit Presidencial</h5>
                                 <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
-                                <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-8">Mas
-                                    información</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="habitacion-matrimonial-tab-pane" role="tabpanel" aria-labelledby="habitacion-matrimonial-tab" tabindex="0">
-                <div class="row row-cols-1 row-cols-md-4 p-5">
-                    <div class="col mb-4">
-                        <div class="card h-100">
-                            <img src="../img/habitacion.jpeg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Habitación Matrimonial</h5>
-                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
-                                <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-9">Mas
-                                    información</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-4">
-                        <div class="card h-100">
-                            <img src="../img/habitacion1.jpeg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Habitación Matrimonial</h5>
-                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
-                                <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-10">Mas
-                                    información</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="habitacion-familiar-tab-pane" role="tabpanel" aria-labelledby="habitacion-familiar-tab"
-                tabindex="0">
-                <div class="row row-cols-1 row-cols-md-4 p-5">
-                    <div class="col mb-4">
-                        <div class="card h-100">
-                            <img src="../img/habitacion2.jpeg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Habitación Familiar</h5>
-                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
-                                <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-11">Mas
-                                    información</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-4">
-                        <div class="card h-100">
-                            <img src="../img/habitacion3.jpeg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Habitación Familiar</h5>
-                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar</button>
-                                <button type="button" class="btn btn-secondary btn-sm" id="id-habitacion-12">Mas
-                                    información</button>
+                                    data-bs-target="#modalReserva" data-bs-dismiss="modal">Reservar
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -428,3 +355,4 @@
 </body>
 
 </html>
+

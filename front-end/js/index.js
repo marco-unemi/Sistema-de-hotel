@@ -11,18 +11,18 @@ btnCerrarSesion.addEventListener('click', event => {
   window.location = 'login.html'
 })
 
-const reportes = document.querySelector('.seccion-reportes'); // Cambio aquí
-const usuarios = document.querySelector('.seccion-usuarios'); // Cambio aquí
-const configuracion = document.querySelector('.seccion-configuracion'); // Cambio aquí
+const usuarios = document.querySelector('.seccion-usuarios')
+const configuracion = document.querySelector('.seccion-configuracion')
+const habitacionEmpresarialTab = document.getElementById('habitacion-empresarial-tab');
 
 window.addEventListener("DOMContentLoaded", (event) => {
-  event.preventDefault();
-  const sessionUser = usersUseCase.getSession();
+  event.preventDefault()
+  const sessionUser = usersUseCase.getSession()
 
   if (sessionUser.cargo === 'EMPLEADO') {
-    reportes.style.display = 'none'; // Ocultar reportes
     usuarios.style.display = 'none'; // Ocultar usuarios
     configuracion.style.display = 'none'; // Ocultar configuración
+    habitacionEmpresarialTab.style.display = 'none';
   }
 });
 

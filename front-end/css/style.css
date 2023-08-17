@@ -126,7 +126,7 @@ td,
   border-color: black;
 }
 
-.card-header {
+.card-header, .bg-thead {
   background-color: black;
 }
 
