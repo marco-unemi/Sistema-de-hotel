@@ -1,5 +1,5 @@
 
-//archivo 4
+//ARCHIVO 12
 import { ClienteRepository } from '../repository/clientes-repository.js'
 import { Cliente } from '../entity/models.js'
 
@@ -20,6 +20,7 @@ export class ClienteUseCase {
             data.telefono,
             data.correo,
             data.tipoCliente,
+            data.habitacion,
             data.tiempoReserva,
             data.tipoPago,
             data.numeroTarjeta,

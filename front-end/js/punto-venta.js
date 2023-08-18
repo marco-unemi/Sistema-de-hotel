@@ -1,47 +1,36 @@
+import { ClienteUseCase } from '../../src/use-case/clientes-use-case.js'
 
+const clienteUseCase = new ClienteUseCase()
 
-// Llenar la lista de nombres de clientes desde localStorage
-const clientNameSelect = document.getElementById('clientNameSelect');
-const savedOrders = JSON.parse(localStorage.getItem('orders') || '[]');
-savedOrders.forEach(order => {
-    const option = document.createElement('option');
-    option.value = order.clientName;
-    option.textContent = order.clientName;
-    clientNameSelect.appendChild(option);
-});
+const ordenModal = document.getElementById('ordenModal')
+const selectCliente = document.getElementById('clientNameSelect')
+const roomSelect = document.getElementById('roomSelect')
 
-document.getElementById('orderForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const selectedClient = document.getElementById('clientNameSelect').value;
-    const selectedRoom = document.getElementById('roomSelect').value;
-    const quantity = parseInt(document.getElementById('quantityInput').value);
-    const selectedProduct = document.getElementById('productName').textContent;
-    const productPrice = parseFloat(document.getElementById('productPrice').textContent.replace('$', ''));
+ordenModal.addEventListener('shown.bs.modal', function () {
+    ordenModal.focus()
 
-    // Encontrar la orden del cliente (si existe)
-    const clientOrder = savedOrders.find(order => order.clientName === selectedClient);
-    if (clientOrder) {
-      // Actualizar la orden existente
-      clientOrder.orders.push({
-        product: selectedProduct,
-        quantity: quantity,
-        totalPrice: quantity * productPrice
-      });
-    } else {
-      // Crear una nueva orden para el cliente
-      savedOrders.push({
-        clientName: selectedClient,
-        orders: [{
-          product: selectedProduct,
-          quantity: quantity,
-          totalPrice: quantity * productPrice
-        }]
-      });
+    const clientes = clienteUseCase.getClientes()
+
+    selectCliente.options.length = 1
+    for (const c of clientes) {
+        const option = document.createElement('option');
+        option.value = c.cedula
+        option.text = `${c.nombres}`
+        selectCliente.add(option)
     }
 
-    // Actualizar localStorage
-    localStorage.setItem('orders', JSON.stringify(savedOrders));
+    // When a customer is selected, update the associated room
+    selectCliente.addEventListener('change', function () {
+        const selectedCedula = selectCliente.value;
+        const selectedCustomer = clientes.find(c => c.cedula === selectedCedula);
 
-    // Reiniciar el formulario
-    document.getElementById('orderForm').reset();
-  });
+        // Clear previous room options
+        roomSelect.options.length = 0;
+
+        // Add the room associated with the selected customer
+        const roomOption = document.createElement('option');
+        roomOption.value = selectedCustomer.habitacion;
+        roomOption.text = `Habitación ${selectedCustomer.habitacion}`;
+        roomSelect.add(roomOption);
+    });
+})

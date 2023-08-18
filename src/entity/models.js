@@ -1,7 +1,7 @@
 
-//archivo 3
+//ARCHIVO 6
 export class Hotel {
-    constructor(nombre, telefono, correo, ubicacion, tipoMoneda){
+    constructor(nombre, telefono, correo, ubicacion, tipoMoneda) {
         this.nombre = nombre;
         this.telefono = telefono;
         this.correo = correo;
@@ -11,13 +11,14 @@ export class Hotel {
 }
 
 export class Cliente {
-    constructor(nombres, cedula, fechaReserva, telefono, correo, tipoCliente, tiempoReserva, tipoPago, numeroTarjeta, descuento, monto) {
+    constructor(nombres, cedula, fechaReserva, telefono, correo, tipoCliente, habitacion, tiempoReserva, tipoPago, numeroTarjeta, descuento, monto) {
         this.nombres = nombres
         this.cedula = cedula
         this.fechaReserva = new Date(fechaReserva)
         this.telefono = telefono
         this.correo = correo
         this.tipoCliente = tipoCliente
+        this.habitacion = habitacion
         this.tiempoReserva = tiempoReserva
         this.tipoPago = tipoPago
         this.numeroTarjeta = numeroTarjeta
@@ -31,3 +32,5 @@ export class Habitacion {
         this.precio = precio
     }
 }
+
+

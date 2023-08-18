@@ -1,5 +1,5 @@
 
-//archivo 5
+//ARCHIVO 10
 import { Cliente } from "../entity/models.js"
 
 export class ClienteRepository {
@@ -13,6 +13,7 @@ export class ClienteRepository {
                 c.telefono, 
                 c.correo, 
                 c.tipoCliente, 
+                c.habitacion, 
                 c.tiempoReserva, 
                 c.tipoPago, 
                 c.numeroTarjeta, 
