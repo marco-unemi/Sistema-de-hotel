@@ -1,6 +1,6 @@
 <!--ARCHIVO 1-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
 
 <body>
     <!-- BARRA DE NAVEGACION -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark justify-content-between">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg justify-content-between">
         <!--Brand-->
         <a href="#" class="navbar-brand mx-5">
             <h1 class="name-hotel">Luminar</h1>
@@ -106,133 +106,103 @@
     <main>
         <i class="bi bi-cart-plus-fill ventas"></i>
         <h2 class="d-inline-block">PUNTO DE VENTA</h2>
-        <div class="container">
-            <h1 class="mt-5">Pedidos de Productos</h1>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="product-card">
-                        <img src="../img/Productos/arrozconpollo.jpg" alt="Producto 1" class="img-fluid" width="200px"
-                            height="200px">
-                        <h2>Arroz con Pollo</h2>
-                        <p>Precio: $10.00</p>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ordenModal">Realizar
-                            Pedido</button>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product-card">
-                        <img src="../img/Productos/arrozconpollo.jpg" alt="Producto 1" class="img-fluid" width="200px"
-                            height="200px">
-                        <h2>Arroz con Pollo</h2>
-                        <p>Precio: $10.00</p>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ordenModal">Realizar
-                            Pedido</button>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product-card">
-                        <img src="../img/Productos/arrozconpollo.jpg" alt="Producto 1" class="img-fluid" width="200px"
-                            height="200px">
-                        <h2>Arroz con Pollo</h2>
-                        <p>Precio: $10.00</p>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ordenModal">Realizar
-                            Pedido</button>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product-card">
-                        <img src="../img/Productos/cangrejo.jpg" alt="Producto 1" class="img-fluid" width="200px"
-                            height="200px">
-                        <h2>Docena de Cangrejos</h2>
-                        <p>Precio: $10.00</p>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ordenModal">Realizar
-                            Pedido</button>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product-card">
-                        <img src="../img/Productos/ceviche.jpg" alt="Producto 1" class="img-fluid" width="200px"
-                            height="200px">
-                        <h2>Ceviche Especial</h2>
-                        <p>Precio: $10.00</p>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ordenModal">Realizar
-                            Pedido</button>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product-card">
-                        <img src="../img/Productos/cola.jpg" alt="Producto 1" class="img-fluid" width="200px"
-                            height="200px">
-                        <h2>Coca Cola Mediana</h2>
-                        <p>Precio: $10.00</p>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ordenModal">Realizar
-                            Pedido</button>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product-card">
-                        <img src="../img/Productos/encebollado.jpg" alt="Producto 1" class="img-fluid" width="200px"
-                            height="200px">
-                        <h2>Encebollado Especial</h2>
-                        <p>Precio: $10.00</p>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ordenModal">Realizar
-                            Pedido</button>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product-card">
-                        <img src="../img/Productos/fritada.jpg" alt="Producto 1" class="img-fluid" width="200px"
-                            height="200px">
-                        <h2>Fritada Especial</h2>
-                        <p>Precio: $10.00</p>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ordenModal">Realizar
-                            Pedido</button>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product-card">
-                        <img src="../img/Productos/vino.jpg" alt="Producto 1" class="img-fluid" width="200px"
-                            height="200px">
-                        <h2>Vinos</h2>
-                        <p>Precio: $10.00</p>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ordenModal">Realizar
-                            Pedido</button>
-                    </div>
-                </div>
-    </main>
 
-    <!-- Modales para los pedidos de cada producto -->
-    <div class="modal fade" id="ordenModal" tabindex="-1" aria-labelledby="ordenModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="ordenModalLabel">Realizar Pedido</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="orderForm">
-                        <div class="mb-3">
-                            <label for="clientNameSelect" class="form-label">Selecciona el Cliente:</label>
-                            <select class="form-select" id="clientNameSelect" name="cliente" required>
-                                <option>---</option>
-                            </select>
+        <div class="row">
+            <div class="col-sm-8 mx-auto my-auto mb-sm-0">
+                <div class="card">
+                    <div class="card-header text-white" style="background-color: black;">
+                        <h3 class="card-title">Factura</h3>
+                    </div>
+                    <div class="card-body" id="ordenCard">
+                        <form id="orderForm">
+                            <div class="mb-3">
+                                <label for="clientNameSelect" class="form-label">Selecciona el Cliente:</label>
+                                <select class="form-select" id="clientNameSelect" name="cliente" required>
+                                    <option value="">---</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="rom" class="form-label">Habitacion:</label>
+                                <input class="form-control" id="rom" name="room" readonly> </input>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="productoNameSelect" class="form-label">Producto:</label>
+                                <select class="form-select" id="productoSelect" name="producto" required>
+                                    <option>---</option>
+                                    <option>Bebida Gaseosa Coca Cola</option>
+                                    <option>Bebida Gaseosa Sprite</option>
+                                    <option>Bebida Gaseosa Manzana</option>
+                                    <option>Vino Espumoso</option>
+                                    <option>Champaña Delux</option>
+                                    <option>Piña Colada</option>
+                                    <option>Mojito Limón</option>
+                                    <option>Ronda Shots Tequila</option>
+                                    <option>Ronda Shots Vodka</option>
+                                    <option>Cerveza Corona</option>
+                                    <option>Cerveza Pilsener</option>
+                                    <option>Cerveza Siembra</option>
+                                    <option>Cerveza Artesanal</option>
+                                    <option>Jugo Natural Naranja</option>
+                                    <option>Jugo Natural Limón</option>
+                                    <option>Jugo Natural Mango</option>
+                                    <option>Desayuno Americano</option>
+                                    <option>Desayuno Continental</option>
+                                    <option>Desayuno de la Casa</option>
+                                    <option>Piqueo Carnes</option>
+                                    <option>Piqueo Frutas Exoticas</option>
+                                    <option>Piqueo Quesos Especiales</option>
+                                    <option>Piqueo Embutidos</option>
+                                    <option>Almuerzo Especial</option>
+                                    <option>Almuerzo Filete Miñon</option>
+                                    <option>Almuerzo Filete de Pollo</option>
+                                    <option>Cena Ligera</option>
+                                    <option>Cena Familiar</option>
+                                    <option>Cena Matrimonial</option>
+                                    <option>Cena Especial</option>
+                                    <option>Cena Empresarial</option>
+                                    <option>Bailo Terapia Privada</option>
+                                    <option>Masaje Feliz Premiun ultraDelux + (durexplus)</option>
+                                    <option>Masaje Feliz</option>
+                                    <option>Pole Dance a la Habitación</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="precio" class="form-label">Precio:</label>
+                                <input class="form-control" id="precio" name="precio" readonly>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="cantidad" class="form-label">Cantidad:</label>
+                                <input type="number" class="form-control" id="cantidad" name="cantidad" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="totalPagar" class="form-label">total a pagar:</label>
+                                <input class="form-control" id="totalPagar" name="totalPagar" readonly>
+                            </div>
+                            <div class="mb-3">
+                                <label for="tipoPago" class="form-label">Tipo de pago</label>
+                                <select name="tipoPago" id="tipoPago" class="form-select">
+                                    <option>---</option>
+                                    <option value="Efectivo">Efectivo</option>
+                                    <option value="Tarjeta">Tarjeta de crédito</option>
+                                </select>
+                            </div>
+                            <div class="mb-3 px-5" id="tarjeta-input-container" style="display: none;">
+                                <label for="id-numero-tarjeta" class="form-label">Número de Tarjeta</label>
+                                <input type="text" class="form-control" id="id-numero-tarjeta" name="numeroTarjeta"
+                                    placeholder="" value="">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-end" style="background-color: black;">
+                        <div>
+                            <button type="submit" class="btn btn-outline-primary w-25">Enviar</button>
                         </div>
-                        <div class="mb-3">
-                            <label for="roomSelect" class="form-label">Selecciona el Cuarto:</label>
-                            <select class="form-select" id="roomSelect" name="room" required>
-                                <option>---</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="quantityInput" class="form-label">Cantidad:</label>
-                            <input type="number" class="form-control" id="quantityInput" name="quantity" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Realizar Pedido</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -241,7 +211,97 @@
     <script type="module" src="../js/index.js"></script>
     <script type="module" src="../js/clientes.js"></script>
     <script type="module" src="../js/punto-venta.js"></script>
+    <script>
+        // Obtener los elementos del formulario
+        const productoSelect = document.getElementById('productoSelect');
+        const precioInput = document.getElementById('precio');
+        const cantidadInput = document.getElementById('cantidad');
+        const totalPagarInput = document.getElementById('totalPagar');
+
+        // Precios de los productos
+        const preciosProductos = {
+            'Bebida Gaseosa Coca Cola': 2.5,
+            'Bebida Gaseosa Sprite': 2.0,
+            'Bebida Gaseosa Manzana': 3.0,
+            'Vino Espumoso': 10.0,
+            'Champaña Delux': 15.0,
+            'Piña Colada': 14.0,
+            'Mojito Limón': 12.0,
+            'Ronda Shots Tequila': 11.0,
+            'Ronda Shots Vodka': 9.0,
+            'Cerveza Corona': 4.0,
+            'Cerveza Pilsener': 3.0,
+            'Cerveza Siembra': 2.0,
+            'Cerveza Artesanal': 12.0,
+            'Jugo Natural Naranja': 13.0,
+            'Jugo Natural Limón': 14.0,
+            'Jugo Natural Mango': 15.0,
+            'Desayuno Americano': 17.0,
+            'Desayuno Continental': 10.0,
+            'Desayuno de la Casa': 7.0,
+            'Piqueo Carnes': 9.0,
+            'Piqueo Frutas Exoticas': 8.0,
+            'Piqueo Quesos Especiales': 4.0,
+            'Piqueo Embutidos': 7.0,
+            'Almuerzo Especial': 8.0,
+            'Almuerzo Filete Miñon': 4.0,
+            'Almuerzo Filete de Pollo': 5.0,
+            'Cena Ligera': 7.0,
+            'Cena Familiar': 6.0,
+            'Cena Matrimonial': 9.0,
+            'Cena Especial': 8.0,
+            'Cena Empresarial': 10.0,
+            'Bailo Terapia Privada': 9.0,
+            'Masaje Feliz Premiun ultraDelux + (durexplus)': 9.0,
+            'Masaje Feliz': 9.0,
+            'Pole Dance a la Habitación': 9.0,
+        };
+
+        cargarCantidades();
+
+        // Cuando se cambia la selección del producto
+        productoSelect.addEventListener('change', () => {
+            const selectedProducto = productoSelect.value;
+            const selectedPrecio = preciosProductos[selectedProducto];
+            precioInput.value = formatPrice(selectedPrecio);
+            actualizarTotal();
+            guardarCantidades();
+        });
+
+        // Cuando cambia la cantidad
+        cantidadInput.addEventListener('input', () => {
+            actualizarTotal();
+            guardarCantidades();
+        });
+
+        // Función para actualizar el total a pagar
+        function actualizarTotal() {
+            const precio = parseFloat(precioInput.value.replace(/\./g, '').replace(',', '.'));
+            const cantidad = parseFloat(cantidadInput.value);
+            const total = precio * cantidad || 0; // Si no hay cantidad, el total es 0
+            totalPagarInput.value = formatPrice(total);
+        }
+
+        // Función para formatear el precio con puntos y dos decimales
+        function formatPrice(price) {
+            return price.toLocaleString('es-ES', { style: 'currency', currency: 'USD', minimumFractionDigits: 2 });
+        }
+
+        // Función para guardar las cantidades en el localStorage
+        function guardarCantidades() {
+            const selectedProducto = productoSelect.value;
+            const cantidad = cantidadInput.value;
+            localStorage.setItem(selectedProducto, cantidad);
+        }
+
+        // Función para cargar las cantidades desde el localStorage
+        function cargarCantidades() {
+            const selectedProducto = productoSelect.value;
+            const cantidad = localStorage.getItem(selectedProducto) || 0;
+            cantidadInput.value = cantidad;
+        }
+
+    </script>
 </body>
 
 </html>
-

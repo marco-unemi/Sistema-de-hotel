@@ -1,8 +1,8 @@
-
+import { UsersUseCase } from '../../src/use-case/users-use-case.js';
 import { HotelUseCase } from "../../src/use-case/hotel-use-case.js";
 import { renderHotel } from "../../src/util/table-render-info-hotel.js";
 
-
+const usersUseCase = new UsersUseCase();
 const hotelUseCase = new HotelUseCase();
 
 const tableInfoHotel = document.querySelector('#id-table-info-hotel > thead');
@@ -14,7 +14,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     tableInfoHotel.innerHTML = template;
 });
 
-// ...
 
 btnGuardar.addEventListener('click', (event) => {
     event.preventDefault();

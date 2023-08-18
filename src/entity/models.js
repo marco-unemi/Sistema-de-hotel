@@ -33,4 +33,16 @@ export class Habitacion {
     }
 }
 
+export class Servicio {
+    constructor(nombres, habitacion, producto, precio, cantidad, totalPagar, tipoPago, numeroTarjeta) {
+        this.nombres = nombres
+        this.habitacion = habitacion
+        this.producto = producto
+        this.precio = precio
+        this.cantidad = cantidad
+        this.totalPagar = totalPagar
+        this.tipoPago = tipoPago
+        this.numeroTarjeta = numeroTarjeta
 
+    }
+}

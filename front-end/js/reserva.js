@@ -1,7 +1,5 @@
-
-//archivo 2
 import { UsersUseCase } from '../../src/use-case/users-use-case.js';
-import { ClienteUseCase } from '../../src/use-case/clientes use case.js'
+import { ClienteUseCase } from '../../src/use-case/clientes-use-case.js'
 
 //    Creamos la instancia del caso de uso
 const clienteUseCase = new ClienteUseCase();
@@ -9,10 +7,24 @@ const usersUseCase = new UsersUseCase();
 
 const formCliente = document.getElementById('id-form-reserva')
 
-const btnCerrarSesion = document.getElementById('id-btn-cerrar-sesion')
+const btnCerrarSesion = document.querySelector('#id-btn-cerrar-sesion')
+
+btnCerrarSesion.addEventListener('click', event => {
+    event.preventDefault()
+    usersUseCase.setRemoveSession()
+    window.location.href = '../login.html'; // Cambia esta línea
+})
 
 const tipoPagoSelect = document.getElementById("id-tipo-pago");
 const tarjetaInputContainer = document.getElementById("tarjeta-input-container");
+
+tipoPagoSelect.addEventListener("change", function () {
+    if (tipoPagoSelect.value === "Tarjeta") {
+        tarjetaInputContainer.style.display = "block";
+    } else {
+        tarjetaInputContainer.style.display = "none";
+    }
+});
 
 const btnCalcularTotalPagar = document.getElementById('btn-calcular-total-pagar')
 
@@ -47,92 +59,49 @@ formCliente.addEventListener('submit', function (event) {
     alert('Habitacion reservada exitosamente.');
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const btnReservar = document.querySelector('.btn-reserva');
-    const btnReservado = document.querySelector('.btn-reservado');
+function inicializarReservaHabitacion(tipoHabitacion) {
+    const btnReserva = document.querySelector(`.btn-reserva-habitacion-${tipoHabitacion}`);
+    const btnReservado = document.querySelector(`.btn-reservado-habitacion-${tipoHabitacion}`);
 
-    btnReservar.addEventListener('click', function () {
-        btnReservar.style.display = 'none';
+    btnReserva.addEventListener('click', function () {
+        btnReserva.style.display = 'none';
         btnReservado.style.display = 'inline-block';
 
         const reserva = {
             status: 'reservado'
         };
 
-        localStorage.setItem('reserva', JSON.stringify(reserva));
+        localStorage.setItem(`reservaHabitacion${tipoHabitacion}`, JSON.stringify(reserva));
     });
 
     btnReservado.addEventListener('click', function () {
         btnReservado.style.display = 'none';
-        btnReservar.style.display = 'inline-block';
+        btnReserva.style.display = 'inline-block';
 
         const reserva = {
             status: 'reservar'
         };
 
-        localStorage.setItem('reserva', JSON.stringify(reserva));
+        localStorage.setItem(`reservaHabitacion${tipoHabitacion}`, JSON.stringify(reserva));
     });
 
-    // Verifica el estado almacenado en el Local Storage al cargar la página
-    const reservaJSON = localStorage.getItem('reserva');
+    const reservaJSON = localStorage.getItem(`reservaHabitacion${tipoHabitacion}`);
     if (reservaJSON) {
         const reserva = JSON.parse(reservaJSON);
         if (reserva.status === 'reservado') {
             btnReservado.style.display = 'inline-block';
-            btnReservar.style.display = 'none';
+            btnReserva.style.display = 'none';
         }
     }
-});
+}
 
 document.addEventListener('DOMContentLoaded', function () {
-    const btnReservaHabitacion102 = document.querySelector('.btn-reserva-habitacion-102');
-    const btnReservadoHabitacion102 = document.querySelector('.btn-reservado-habitacion-102');
-
-    btnReservaHabitacion102.addEventListener('click', function () {
-        btnReservaHabitacion102.style.display = 'none';
-        btnReservadoHabitacion102.style.display = 'inline-block';
-
-        const reserva = {
-            status: 'reservado'
-        };
-
-        localStorage.setItem('reservaHabitacionNormal', JSON.stringify(reserva));
-    });
-
-    btnReservadoHabitacion102.addEventListener('click', function () {
-        btnReservadoHabitacion102.style.display = 'none';
-        btnReservaHabitacion102.style.display = 'inline-block';
-
-        const reserva = {
-            status: 'reservar'
-        };
-
-        localStorage.setItem('reservaHabitacionNormal', JSON.stringify(reserva));
-    });
-
-    // Verifica el estado almacenado en el Local Storage al cargar la página
-    const reservaJSON = localStorage.getItem('reservaHabitacionNormal');
-    if (reservaJSON) {
-        const reserva = JSON.parse(reservaJSON);
-        if (reserva.status === 'reservado') {
-            btnReservadoHabitacion102.style.display = 'inline-block';
-            btnReservaHabitacion102.style.display = 'none';
-        }
-    }
+    inicializarReservaHabitacion('101');
+    inicializarReservaHabitacion('102');
+    inicializarReservaHabitacion('103');
+    inicializarReservaHabitacion('104');
+    inicializarReservaHabitacion('1000');
+    inicializarReservaHabitacion('1010');
+    inicializarReservaHabitacion('1020');
+    inicializarReservaHabitacion('1030');
 });
-
-
-btnCerrarSesion.addEventListener('click', event => {
-    event.preventDefault()
-    usersUseCase.setRemoveSession()
-    window.location.href = '../login.html'; // Cambia esta línea
-})
-
-tipoPagoSelect.addEventListener("change", function () {
-    if (tipoPagoSelect.value === "Tarjeta") {
-        tarjetaInputContainer.style.display = "block";
-    } else {
-        tarjetaInputContainer.style.display = "none";
-    }
-});
-

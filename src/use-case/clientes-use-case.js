@@ -1,5 +1,3 @@
-
-//ARCHIVO 12
 import { ClienteRepository } from '../repository/clientes-repository.js'
 import { Cliente } from '../entity/models.js'
 
