@@ -203,6 +203,32 @@
                 </div>
             </div>
         </div>
+
+        <div class="table-responsive pt-5">
+            <div class="card shadow mt-2 p-0">
+                <div class="card-header" style="background-color: black; color: white;">
+                    <h4>FACTURAS DE SERVICIOS</h4>
+                </div>
+                <div class="card-body-clientes p-0">
+                    <table class="table table-striped table-hover" id="id-table-servicios">
+                        <thead class="bg-secondary  text-white">
+                            <tr>
+                                <th>Cliente</th>
+                                <th>N. Habitacion</th>
+                                <th>Servicio</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th>Tipo de pago</th>
+                                <th>Monto a pagar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="facturas-body">
+                        </tbody>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -301,6 +327,69 @@
             cantidadInput.value = cantidad;
         }
 
+    </script>
+    <script>
+        // Función para guardar los datos en el localStorage
+        function guardarEnLocalStorage() {
+            var factura = {
+                nombre: document.getElementById("id-nombre-modal").value,
+                ruc: document.getElementById("iid-ruc-modal").value,
+                numero: document.getElementById("id-numero").value,
+                direccion: document.getElementById("id-direccion").value,
+                fecha: document.getElementById("id-fecha").value,
+                habitacion: document.getElementById("id-habitacion").value,
+                precioHabitacion: document.getElementById("id-precioHabitacion").value,
+                servicios: document.getElementById("id-servicios").value,
+                precioServicios: document.getElementById("id-precioServicios").value,
+                totalPagar: document.getElementById("id-totalPagar").value,
+                tipoPago: document.getElementById("id-tipo-pago").value,
+                numeroTarjeta: document.getElementById("id-numero-tarjeta").value,
+            };
+
+            // Obtener facturas existentes del localStorage
+            var facturasGuardadas = JSON.parse(localStorage.getItem("facturas")) || [];
+
+            // Agregar la nueva factura a la lista
+            facturasGuardadas.push(factura);
+
+            // Almacenar la lista actualizada en el localStorage
+            localStorage.setItem("facturas", JSON.stringify(facturasGuardadas));
+
+            alert("Factura guardada exitosamente.");
+        }
+
+        // Agregar el evento al botón de enviar
+        document.querySelector(".btn.btn-outline-primary").addEventListener("click", guardarEnLocalStorage);
+    </script>
+    <script>
+        // Función para guardar los datos en el localStorage
+        function guardarFactura() {
+            var factura = {
+                cliente: document.getElementById("clientNameSelect").value,
+                habitacion: document.getElementById("rom").value,
+                producto: document.getElementById("productoSelect").value,
+                precio: document.getElementById("precio").value,
+                cantidad: document.getElementById("cantidad").value,
+                totalPagar: document.getElementById("totalPagar").value,
+                tipoPago: document.getElementById("tipoPago").value,
+                numeroTarjeta: document.getElementById("id-numero-tarjeta").value,
+            };
+
+            // Obtener facturas existentes del localStorage
+            var facturasGuardadas = JSON.parse(localStorage.getItem("facturas")) || [];
+            facturasGuardadas.push(factura);
+            localStorage.setItem("facturas", JSON.stringify(facturasGuardadas));
+
+            alert("Factura guardada exitosamente.");
+        }
+
+        // Agregar el evento al botón de enviar
+        document.querySelector(".btn.btn-outline-primary").addEventListener("click", function (event) {
+            event.preventDefault(); // Evita que el formulario se envíe de manera predeterminada
+            guardarFactura();
+        });
+
+    // Otros eventos pueden ser necesarios para calcular el precio y el total a pagar
     </script>
 </body>
 

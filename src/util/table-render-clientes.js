@@ -14,17 +14,3 @@ export function renderClientes(clientes) {
         </tr>`
     }).join('')
 }
-
-export function renderFacturaServicios(servicio) {
-    return servicio.map((s) => {
-        return `<tr>
-            <td>${s.nombres}</td>
-            <td>${s.habitacion}</td>
-            <td>${s.producto}</td>
-            <td>${s.precio}</td>
-            <td>${s.cantidad}</td>
-            <td>${s.totalPagar}</td>
-            <td>${s.tipoPago}</td>
-        </tr>`
-    }).join('')
-}

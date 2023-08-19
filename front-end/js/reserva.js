@@ -105,3 +105,16 @@ document.addEventListener('DOMContentLoaded', function () {
     inicializarReservaHabitacion('1020');
     inicializarReservaHabitacion('1030');
 });
+document.getElementById("reservarButton").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevenir el envío del formulario si es necesario
+    
+    var customAlert = document.getElementById("customAlert");
+    
+    // Mostrar la alerta
+    customAlert.style.display = "block";
+
+    // Después de un tiempo, ocultar la alerta
+    setTimeout(function() {
+        customAlert.style.display = "none";
+    }, 2000); // Cambia este valor para ajustar la duración de la alerta
+});

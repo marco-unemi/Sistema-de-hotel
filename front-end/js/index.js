@@ -27,3 +27,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 
+document.getElementById("enviarBtn").addEventListener("click", function() {
+  var messageSent = document.getElementById("messageSent");
+  
+  // Mostrar el mensaje enviado
+  messageSent.style.display = "block";
+
+  // Después de un tiempo, ocultar el mensaje
+  setTimeout(function() {
+      messageSent.style.display = "none";
+  }, 2000); // Cambia este valor para ajustar la duración del mensaje
+});
