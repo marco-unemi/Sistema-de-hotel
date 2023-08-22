@@ -1,5 +1,4 @@
-
-<!-- ARCHIVO 2 -->
+<!--ARCHIVO 3-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +24,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!--nav content-->
-        <div class="collapse navbar-collapse flex-grow-0 mx-5" id="contenido-nav-1">
+        <div class="collapse navbar-collapse flex-grow-0 mx-5" id="contenido-nav">
             <ul class="navbar-nav">
                 <!-- INICIO -->
                 <li class="nav-item">
@@ -47,13 +46,13 @@
                 </li>
                 <!-- CLIENTES -->
                 <li class="nav-item">
-                    <a href="../clientes/clientes.html" class="nav-link">
+                    <a href="#" class="nav-link active">
                         Clientes
                     </a>
                 </li>
                 <!-- USUARIOS -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link active seccion-usuarios">
+                    <a href="../usuarios/usuarios.html" class="nav-link seccion-usuarios">
                         Usuarios
                     </a>
                 </li>
@@ -72,7 +71,7 @@
             </ul>
         </div>
 
-        <div class="collapse navbar-collapse flex-grow-0 mx-5" id="contenido-nav-2">
+        <div class="collapse navbar-collapse flex-grow-0 mx-5" id="contenido-nav">
             <ul class="navbar-nav">
                 <!-- INFORMACION -->
                 <li class="nav-item dropdown">
@@ -101,49 +100,77 @@
     </nav>
 
     <main>
-        <i class="bi bi-person-fill-gear usuarios"></i>
-        <h2 class="d-inline-block">USUARIOS</h2>
+        <i class="bi bi-people-fill clientes"></i>
+        <h2 class="d-inline-block">CLIENTES</h2>
 
         <div class="table-responsive">
             <div class="card shadow mt-2 p-0">
-                <div class="card-header">
+                <div class="card-header" style="background-color: black; color: white;">
+                    <h4>FACTURAS DE RESERVAS</h4>
                 </div>
-                <div class="card-body p-0">
-                    <table class="table table-striped table-hover" id="id-table-usuarios">
-                        <thead class="bg-secondary text-white">
+                <div class="card-body-clientes p-0">
+                    <table class="table table-striped table-hover" id="id-table-reserva-habitacion">
+                        <thead class="bg-secondary  text-white">
                             <tr>
-                                <th>Nombres Apellidos</th>
-                                <th>Username</th>
-                                <th>Email</th>
-                                <th>Genero</th>
-                                <th>FechaNacimiento</th>
-                                <th>FechaIngreso</th>
+                                <th>Cliente</th>
+                                <th>Cedula</th>
+                                <th>Fecha reserva</th>
                                 <th>Telefono</th>
-                                <th>Id</th>
-                                <th>Cargo</th>
-                                <th>Estado</th>
-                                <th>Acciones</th>
+                                <th>Tipo Cliente</th>
+                                <th>N. Habitacion</th>
+                                <th>Tiempo de reserva</th>
+                                <th>Tipo de pago</th>
+                                <th>Descuento</th>
+                                <th>Monto a pagar</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td colspan="12" align="center">
-                                    No se ha ingresado registros de usuarios
-                                </td>
-                            </tr>
                         </tbody>
-                        <tfoot>
-                        </tfoot>
                     </table>
                 </div>
             </div>
         </div>
+
     </main>
+    <script>
+        // Función para guardar los datos en el localStorage
+        function guardarEnLocalStorage() {
+            const factura = {
+                nombre: document.getElementById("id-nombre-modal").value,
+                ruc: document.getElementById("iid-ruc-modal").value,
+                numero: document.getElementById("id-numero").value,
+                direccion: document.getElementById("id-direccion").value,
+                fecha: document.getElementById("id-fecha").value,
+                habitacion: document.getElementById("id-habitacion").value,
+                precioHabitacion: document.getElementById("id-precioHabitacion").value,
+                servicios: document.getElementById("id-servicios").value,
+                precioServicios: document.getElementById("id-precioServicios").value,
+                totalPagar: document.getElementById("id-totalPagar").value,
+                tipoPago: document.getElementById("id-tipo-pago").value,
+                numeroTarjeta: document.getElementById("id-numero-tarjeta").value,
+            };
+
+            // Obtener facturas existentes del localStorage
+            const facturasGuardadas = JSON.parse(localStorage.getItem("facturas")) || [];
+
+            // Agregar la nueva factura a la lista
+            facturasGuardadas.push(factura);
+
+            // Almacenar la lista actualizada en el localStorage
+            localStorage.setItem("facturas", JSON.stringify(facturasGuardadas));
+
+            alert("Factura guardada en el localStorage.");
+        }
+
+        // Agregar el evento al botón de enviar
+        document.querySelector(".btn.btn-outline-primary").addEventListener("click", guardarEnLocalStorage);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../js/factura.js"></script>
 
     <script type="module" src="../js/index.js"></script>
-    <script type="module" src="../js/usuarios.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../js/clientes.js"></script>
+    <script type="module" src="../js/factura.js"></script>
 </body>
 
 </html>
